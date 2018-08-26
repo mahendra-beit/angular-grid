@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-touch.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+  <!-- <script src="http://ui-grid.info/release/ui-grid.js"></script> -->
+  <script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+  <script src="app2.js"></script>
+  <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.6.0/angular-translate.js"></script>
+  <script src="angular-ui-grid-translate.js"></script>
+  <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="main.css" type="text/css" /> -->
+  <style>.grid {
+  width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+  <div class="col-lg-12">
+    <div ng-controller="MainCtrl">
+        <h3>Pagination demo for angular-ui-grid-translate</h3>
+      <div ui-grid="gridOptions1" ui-grid-pagination="" class="grid" ui-grid-selection></div>
+      <br/>
+    </div>
+    <div ng-controller="uigt.LanguageController">
+      <div class="btn-group">
+        <button class="btn btn-default btn-sm" ng-click="changeTo('en')">EN</button>
+        <button class="btn btn-default btn-sm" ng-click="changeTo('bg')">BG</button>
+      </div>
+    </div>
+    <p>{{'sample_text' | translate}}</p>
+    Github: <a href="https://github.com/DGarvanski/angular-ui-grid-translate">angular-ui-grid-translate</a>
+  </div>
+</body>
+
+</html>
